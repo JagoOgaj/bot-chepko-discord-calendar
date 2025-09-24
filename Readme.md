@@ -100,4 +100,35 @@ Développé avec **Java + JDA**
     ```bash
    java -jar target/calendar-bot.jar
    ```
+
+---
+
+## Contribution
+
+Nous accueillons les contributions de tous ! Si tu souhaites aider au développement du bot :
+
+1. **Fork** le projet sur GitHub.
+
+2. **Clone** ton fork localement :
+   ```bash
+   git clone https://github.com/TON_UTILISATEUR/bot-chepko-discord-calendar.git
+   ```
+
+3. Crée une branche pour tes modifications :
+    ```bash
+   git checkout -b ma-fonctionnalite
+   ```
+
+4. Fais tes modifications et teste localement.
+
+5. Commit tes changements avec un message clair :
+    ```bash
+   git commit -am "Ajout de ma fonctionnalité"
+   ```
    
+6. Push ta branche sur ton fork :
+    ```bash
+   git push origin ma-fonctionnalite
+   ```
+
+7. Ouvre une Pull Request vers le dépôt principal. Décris clairement tes changements et pourquoi ils sont utiles.
