@@ -89,7 +89,7 @@ Développé avec **Java + JDA**
    ```bash
    mvn clean package -DskipTests
    ```
-3. Configure ton fichier .env :
+3.  Configure tes variables d’environnement :
     ```bash
     TOKEN_BOT=ton_token_discord
     URL_DB=jdbc:postgresql://host:5432/calendar_db
