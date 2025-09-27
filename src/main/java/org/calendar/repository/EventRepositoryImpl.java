@@ -112,7 +112,6 @@ public class EventRepositoryImpl implements EventRepository {
                 rs.getTimestamp("updated_at").toLocalDateTime());
     }
 
-
     @Override
     public List<EventEntity> findByCalendarId(int calendarId) {
         String sql = "SELECT * FROM events WHERE calendar_id = ? ORDER BY start_time";
@@ -149,12 +148,11 @@ public class EventRepositoryImpl implements EventRepository {
         return events;
     }
 
-
     @Override
     public void deleteByCalendarId(int calendarId) {
         String sql = "DELETE FROM events WHERE calendar_id = ?";
         try (Connection conn = Database.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, calendarId);
             stmt.executeUpdate();
         } catch (SQLException e) {

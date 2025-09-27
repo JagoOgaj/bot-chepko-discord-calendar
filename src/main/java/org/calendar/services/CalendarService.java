@@ -287,7 +287,8 @@ public class CalendarService {
         }
 
         for (EventEntity dbEvent : dbEvents) {
-            if (!icsByUid.containsKey(dbEvent.uid())) {
+            if (!icsByUid.containsKey(dbEvent.uid())
+                    && dbEvent.start_time().isAfter(LocalDateTime.now())) {
                 eventRepository.delete(dbEvent.eventId());
             }
         }

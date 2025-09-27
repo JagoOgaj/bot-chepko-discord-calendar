@@ -30,8 +30,7 @@ public class RegisterCalendarSlashCommand implements SlashCommandHandler {
             SlashCommandMeta meta,
             CalendarService calendarService,
             EventContext context,
-            EventService eventService
-            ) {
+            EventService eventService) {
         this.middlewares = middlewares;
         this.meta = meta;
         this.calendarService = calendarService;
@@ -83,8 +82,7 @@ public class RegisterCalendarSlashCommand implements SlashCommandHandler {
                         .queue();
 
                 this.eventService.deleteByCalendarId(
-                        this.calendarService.getCalendarByServerId(serverId).calendarId()
-                );
+                        this.calendarService.getCalendarByServerId(serverId).calendarId());
             }
         } else {
             this.calendarService.registerCalendar(serverId, icsUrlValue, calendarName);

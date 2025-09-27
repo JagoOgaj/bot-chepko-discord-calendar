@@ -1,6 +1,5 @@
 package org.calendar;
 
-
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
@@ -29,10 +28,7 @@ public class Main {
         EventContext context = new EventContext();
 
         Database.init(
-                System.getenv("URL_DB"),
-                System.getenv("USER_DB"),
-                System.getenv("PASSWORD_DB")
-        );
+                System.getenv("URL_DB"), System.getenv("USER_DB"), System.getenv("PASSWORD_DB"));
 
         CalendarRepositoryImpl calendarRepository = new CalendarRepositoryImpl();
         EventRepositoryImpl eventRepository = new EventRepositoryImpl();
@@ -87,8 +83,7 @@ public class Main {
                                                 true))),
                         calendarService,
                         context,
-                        eventService
-                        );
+                        eventService);
 
         SlashCommandHandler disableNotificationSlashCommand =
                 new DisableNotificationSlashCommand(

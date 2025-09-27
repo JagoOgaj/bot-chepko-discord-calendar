@@ -47,7 +47,6 @@ public class NextEventSlashCommand implements SlashCommandHandler {
         int calendarId = this.calendarService.getCalendarByServerId(serverId).calendarId();
         LocalDateTime startOfDay = date.atStartOfDay();
         LocalDateTime endOfDay = date.atTime(23, 59, 59);
-
         List<EventEntity> events =
                 this.eventService.getEventFor(calendarId, startOfDay).stream()
                         .filter(e -> !e.start_time().isAfter(endOfDay))
