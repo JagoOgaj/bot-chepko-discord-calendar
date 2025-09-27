@@ -196,7 +196,7 @@ public class NotificationService {
         }
 
         for (EventEntity dbEvent : dbEvents) {
-            if (!icsByUid.containsKey(dbEvent.uid())) {
+            if (!icsByUid.containsKey(dbEvent.uid()) && dbEvent.start_time().isAfter(LocalDateTime.now())) {
                 String dbTime =
                         dbEvent.start_time().format(formatter)
                                 + " → "
